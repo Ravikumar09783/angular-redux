@@ -1,0 +1,50 @@
+<div class="adduser">
+  <h2 mat-dialog-title> Add User Form</h2>
+    <form [formGroup]="adduser" (ngSubmit)="AddUser()">
+        <div class="mb-2">
+          <label for="exampleInputEmail1" class="form-label">Name</label>
+          <input type="text" class="form-control"  aria-describedby="emailHelp" formControlName="name">
+        </div>
+        <div class="mb-2">
+          <label for="exampleInputPassword1" class="form-label">User Name</label>
+          <input type="text" class="form-control"  formControlName="username">
+        </div>
+
+        <div class="mb-2">
+            <label for="exampleInputPassword1" class="form-label">Email</label>
+            <input type="email" class="form-control"  formControlName="email">
+          </div>
+
+          <div class="mb-2">
+            <label for="exampleInputPassword1" class="form-label">Street</label>
+            <input type="text" class="form-control"  formControlName="street">
+          </div>
+
+          <div class="mb-2">
+            <label for="exampleInputPassword1" class="form-label">Suit</label>
+            <input type="text" class="form-control"  formControlName="suit">
+          </div>
+
+          <div class="mb-2">
+            <label for="exampleInputPassword1" class="form-label">City</label>
+            <input type="text" class="form-control"  formControlName="city">
+          </div>
+
+          <div class="mb-2">
+            <label for="exampleInputPassword1" class="form-label">Phone</label>
+            <input type="text" class="form-control"  formControlName="phone">
+          </div>
+
+          <div class="mb-2">
+            <label for="exampleInputPassword1" class="form-label">website</label>
+            <input type="text" class="form-control"  formControlName="website">
+          </div>
+
+
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+</div>
+<!-- <mat-dialog-actions>
+  <button mat-button mat-dialog-close> Close</button>
+</mat-dialog-actions> -->

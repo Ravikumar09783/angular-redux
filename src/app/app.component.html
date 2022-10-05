@@ -1,0 +1,48 @@
+
+
+<section>
+  <div class="m-5 container">
+    <app-add-user></app-add-user>
+  </div>
+
+  <div class="m-5 container d-flex justify-content-between">
+    <app-userinfo></app-userinfo>
+    <app-user-history></app-user-history>
+  </div>
+</section>
+
+<h1 class="text-center my-4">Data Table</h1>
+
+<ng-container *ngrxLet="data$; let data; let error = $error">
+  <div class="container">
+    <div class="row">
+      <!-- SPINNER -->
+      <!-- <div class="col-12" *ngIf="!error && !data">
+        <app-spinner></app-spinner>
+      </div> -->
+      <!-- ERROR -->
+      <!-- <div class="col-12" *ngIf="error">
+        <app-error></app-error>
+      </div> -->
+      <!-- TABLE-->
+      <ng-container *ngIf="data">
+        <div class="col-12 mx-auto">
+          <div class="mb-3">
+            <input
+              [formControl]="searchControl"
+              type="search"
+              class="form-control"
+              #search
+              placeholder="Search..."
+              aria-describedby="filter"
+            />
+          </div>
+        </div>
+        <div class="col-12">
+          <app-data-table [data]="data" [headerRow]="headerRow"> </app-data-table>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+</ng-container>
+<router-outlet></router-outlet>

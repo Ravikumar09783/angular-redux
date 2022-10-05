@@ -1,0 +1,34 @@
+
+<div class="heading my-3 text-center">
+  <h2>On Click User data</h2>
+</div>
+<table class="table mt-3">
+  <thead>
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col">Name</th>
+      <th scope="col">User Name</th>
+      <th scope="col">Phone</th>
+      <th scope="col">Website</th>
+      <th scope="col">Street</th>
+      <th scope="col">Suit</th>
+      <th scope="col">City</th>
+      <th scope="col">Zip-code</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">{{tableData.id}}</th>
+      <td>{{tableData.name}}</td>
+      <td>{{tableData.username}}</td>
+      <td>{{tableData.phone}}</td>
+      <td>{{tableData.website}}</td>
+      <td>{{tableData.address.street}}</td>
+      <td>{{tableData.address.suit}}</td>
+      <td>{{tableData.address.city}}</td>
+      <td>{{tableData.address.zipcode}}</td>
+  
+    </tr>
+
+  </tbody>
+</table>

@@ -1,0 +1,21 @@
+<button (click)="userinfo()" class="btn btn-primary">User Info</button>
+
+<table class="table" *ngIf="(selectedUser.id>0 )">
+  <thead>
+    <tr>
+      <th scope="col">Emp id</th>
+      <th scope="col">Name</th>
+      <th scope="col">Phone</th>
+      <th scope="col">Address</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">{{selectedUser.id}}</th>
+      <td>{{selectedUser.name}}</td>
+      <td>{{selectedUser.phone}}</td>
+      <td>{{selectedUser.address.street}} {{selectedUser.address.city}} {{selectedUser.address.zipcode}}</td>
+    </tr>
+
+  </tbody>
+</table>
